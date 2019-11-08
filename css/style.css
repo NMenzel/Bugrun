@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    background: #ffffff url('../images/bg.png');
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+ .score-panel {
+    margin-bottom: 5px;
+    margin-top: 55px;
+}
+
+.score-panel .lives {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .lives li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+/*
+ * Styles for footer
+ */
+
+footer {
+    margin-top: 10px;
+}
+
+footer .icons {
+    margin: 5px 5px;
+    display: inline-block;
+    font-size: 30px;
+}
+
+footer .icons li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 35px;
+    
+}
