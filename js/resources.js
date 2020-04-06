@@ -1,7 +1,56 @@
-(function(){var resourceCache={};var readyCallbacks=[];function load(urlOrArr){if(urlOrArr instanceof Array){urlOrArr.forEach(function(url){_load(url)})}else{_load(urlOrArr)}}
-function _load(url){if(resourceCache[url]){return resourceCache[url]}else{var img=new Image();img.onload=function(){resourceCache[url]=img;if(isReady()){readyCallbacks.forEach(function(func){func()})}};resourceCache[url]=!1;img.src=url}}
-function get(url){return resourceCache[url]}
-function isReady(){var ready=!0;for(var k in resourceCache){if(resourceCache.hasOwnProperty(k)&&!resourceCache[k]){ready=!1}}
-return ready}
-function onReady(func){readyCallbacks.push(func)}
-window.Resources={load:load,get:get,onReady:onReady,isReady:isReady}})()
+(function() {
+    var resourceCache = {};
+    var readyCallbacks = [];
+
+    function load(urlOrArr) {
+        if (urlOrArr instanceof Array) {
+            urlOrArr.forEach(function(url) {
+                _load(url)
+            })
+        } else {
+            _load(urlOrArr)
+        }
+    }
+
+    function _load(url) {
+        if (resourceCache[url]) {
+            return resourceCache[url]
+        } else {
+            var img = new Image();
+            img.onload = function() {
+                resourceCache[url] = img;
+                if (isReady()) {
+                    readyCallbacks.forEach(function(func) {
+                        func()
+                    })
+                }
+            };
+            resourceCache[url] = !1;
+            img.src = url
+        }
+    }
+
+    function get(url) {
+        return resourceCache[url]
+    }
+
+    function isReady() {
+        var ready = !0;
+        for (var k in resourceCache) {
+            if (resourceCache.hasOwnProperty(k) && !resourceCache[k]) {
+                ready = !1
+            }
+        }
+        return ready
+    }
+
+    function onReady(func) {
+        readyCallbacks.push(func)
+    }
+    window.Resources = {
+        load: load,
+        get: get,
+        onReady: onReady,
+        isReady: isReady
+    }
+})()
