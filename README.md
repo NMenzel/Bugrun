@@ -1,8 +1,8 @@
-# Mobile Web Specialist Certification Course
+# The bugrun game
 ---
 # Project Overview
 
-You can play BugRun. Get to the Water to win! dont hit any bugs tho
+Play BugRun. Get to the Water to win. Dont hit any bugs!
 
 ## Usage
 
